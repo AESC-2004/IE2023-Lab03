@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm Mon Feb 17 23:34:12 2025
+AVRASM ver. 2.2.8  C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm Mon Feb 17 23:52:38 2025
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm(9): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc'
@@ -1042,7 +1042,7 @@ C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Lab
                                  ;Establecer dirección en DATA mem. para utilizar el X pointer
                                  .DSEG
                                  DISP7SEG_RAM:
-000100                           	.BYTE 16	;rESERVAR 16 BYTES en RAM para la tabla
+000100                           	.BYTE 16	;Reservar 16 bytes en RAM 
                                  
                                  ;Program mem.
                                  .CSEG
@@ -1076,7 +1076,6 @@ C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Lab
                                  .def	COUNTSECStemp	= R21
                                  .def	COUNTDECStemp	= R25
                                  .def	COUNT			= R22
-                                 ;.def	COUNTtemp		= R21
                                  .def	PBUP_LASTVALUE	= R23
                                  .def	PBDWN_LASTVALUE	= R24
                                  
@@ -1084,11 +1083,11 @@ C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Lab
                                  	;Deshabilitar interrupciones globales en el SETUP
 00002a 94f8                      	CLI
                                  
-                                 	;Establecemos el ZPointer en la dirección de DISP7SEG
+                                 	;Establecemos el ZPointer (Unidades de segundo) en la dirección de DISP7SEG
 00002b e4e4                      	LDI		ZL, LOW(DISP7SEG << 1)
 00002c e0f0                      	LDI		ZH, HIGH(DISP7SEG << 1)
                                  
-                                 	;Establecemos el XPointer en la dirección de DISP7SEG
+                                 	;Establecemos el XPointer (Decenas de segundo) en la dirección de DISP7SEG
 00002d e0a0                      	LDI		XL, LOW(DISP7SEG_RAM << 1)
 00002e e0b2                      	LDI		XH, HIGH(DISP7SEG_RAM << 1)
                                  	;Almacenamos datos manualmente en RAM
@@ -1199,6 +1198,9 @@ C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Lab
 000083 f009                      	BREQ	COUNTSECS_UP
 000084 cffd                      	RJMP	MAIN_LOOP
                                  
+                                 	;Si aumentamos 1 segundo, debemos verificar si van 10 segundos en el conteo
+                                 	;Si ya van 10 segundos en el conteo, reiniciamos el Display del contador de unidades de segundo (COUNTSECS)...
+                                 	;y aumentamos el valor de decenas de segundo (COUNTDECS)
                                  	COUNTSECS_UP:
 000085 2733                      		CLR		COUNTMILLIS
 000086 9543                      		INC		COUNTSECS
@@ -1215,6 +1217,7 @@ C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Lab
 000090 f011                      		BREQ	COUNTDECS_CLEAR
 000091 9611                      		ADIW	X, 1
 000092 cfef                      		RJMP	MAIN_LOOP
+                                 	;Si ya van 60 segundos en el conteo, reiniciamos el Display del contador de decenas de segundo (COUNTSECS)...
                                  	COUNTDECS_CLEAR:
 000093 2722                      		CLR		COUNTDECS
 000094 e0a0                      		LDI		XL, LOW(DISP7SEG_RAM << 1)
@@ -1224,7 +1227,9 @@ C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Lab
                                  
                                  
                                  ;********Sub-rutinas de interrupción******** 
-                                 TIMER_RESET_AND_DISPS_TOGGLE:
+                                 TIMER_RESET_AND_DISPS_TOGGLE:		
+                                 	;Rutina para reiniciar Timer0 luego de 10ms...
+                                 	;y para "togglear" qué display se muestra (Unidades de segundo o decenas de segundo)
                                  	;Reiniciamos TIMER0 e incrementamos COUNTMILLIS
 000097 9533                      	INC		COUNTMILLIS
 000098 e604                      	LDI		R16, 100

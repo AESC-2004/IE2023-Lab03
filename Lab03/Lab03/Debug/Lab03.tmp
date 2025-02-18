@@ -24,21 +24,21 @@
  </OUTPUT_FILES>
  <LABELS>
   <DISP7SEG_RAM><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>13</LINE></DISP7SEG_RAM>
-  <SETUP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>45</LINE></SETUP>
-  <PIN_CHANGE><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>210</LINE></PIN_CHANGE>
-  <TIMER_RESET_AND_DISPS_TOGGLE><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>189</LINE></TIMER_RESET_AND_DISPS_TOGGLE>
+  <SETUP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>44</LINE></SETUP>
+  <PIN_CHANGE><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>215</LINE></PIN_CHANGE>
+  <TIMER_RESET_AND_DISPS_TOGGLE><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>192</LINE></TIMER_RESET_AND_DISPS_TOGGLE>
   <DISP7SEG><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>31</LINE></DISP7SEG>
-  <MAIN_LOOP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>158</LINE></MAIN_LOOP>
-  <COUNTSECS_UP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>164</LINE></COUNTSECS_UP>
-  <COUNTSECS_CLEAR_AND_COUNTDECS_UP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>171</LINE></COUNTSECS_CLEAR_AND_COUNTDECS_UP>
-  <COUNTDECS_CLEAR><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>180</LINE></COUNTDECS_CLEAR>
-  <COUNTDECS_SET><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>204</LINE></COUNTDECS_SET>
-  <TIMER_RETURN><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>202</LINE></TIMER_RETURN>
-  <COUNTUP_SEG><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>238</LINE></COUNTUP_SEG>
-  <RETURN_UP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>228</LINE></RETURN_UP>
-  <COUNTDWN_SEG><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>252</LINE></COUNTDWN_SEG>
-  <RETURN_DWN><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>232</LINE></RETURN_DWN>
-  <COUNTUP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>245</LINE></COUNTUP>
-  <COUNTDWN><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>259</LINE></COUNTDWN>
+  <MAIN_LOOP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>157</LINE></MAIN_LOOP>
+  <COUNTSECS_UP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>166</LINE></COUNTSECS_UP>
+  <COUNTSECS_CLEAR_AND_COUNTDECS_UP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>173</LINE></COUNTSECS_CLEAR_AND_COUNTDECS_UP>
+  <COUNTDECS_CLEAR><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>183</LINE></COUNTDECS_CLEAR>
+  <COUNTDECS_SET><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>209</LINE></COUNTDECS_SET>
+  <TIMER_RETURN><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>207</LINE></TIMER_RETURN>
+  <COUNTUP_SEG><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>243</LINE></COUNTUP_SEG>
+  <RETURN_UP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>233</LINE></RETURN_UP>
+  <COUNTDWN_SEG><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>257</LINE></COUNTDWN_SEG>
+  <RETURN_DWN><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>237</LINE></RETURN_DWN>
+  <COUNTUP><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>250</LINE></COUNTUP>
+  <COUNTDWN><FILE>C:\Users\ang50\OneDrive\Documents\Git\UVG\Programación de microcontroladores\Laboratorios\IE2023-Lab03\Lab03\Lab03\main.asm</FILE><LINE>264</LINE></COUNTDWN>
  </LABELS>
 </ASSEMBLER_INFO>

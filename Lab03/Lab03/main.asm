@@ -11,7 +11,7 @@
 ;Establecer dirección en DATA mem. para utilizar el X pointer
 .DSEG
 DISP7SEG_RAM:
-	.BYTE 16	;rESERVAR 16 BYTES en RAM para la tabla
+	.BYTE 16	;Reservar 16 bytes en RAM 
 
 ;Program mem.
 .CSEG
@@ -38,7 +38,6 @@ DISP7SEG:
 .def	COUNTSECStemp	= R21
 .def	COUNTDECStemp	= R25
 .def	COUNT			= R22
-;.def	COUNTtemp		= R21
 .def	PBUP_LASTVALUE	= R23
 .def	PBDWN_LASTVALUE	= R24
 
@@ -46,11 +45,11 @@ SETUP:
 	;Deshabilitar interrupciones globales en el SETUP
 	CLI
 
-	;Establecemos el ZPointer en la dirección de DISP7SEG
+	;Establecemos el ZPointer (Unidades de segundo) en la dirección de DISP7SEG
 	LDI		ZL, LOW(DISP7SEG << 1)
 	LDI		ZH, HIGH(DISP7SEG << 1)
 
-	;Establecemos el XPointer en la dirección de DISP7SEG
+	;Establecemos el XPointer (Decenas de segundo) en la dirección de DISP7SEG
 	LDI		XL, LOW(DISP7SEG_RAM << 1)
 	LDI		XH, HIGH(DISP7SEG_RAM << 1)
 	;Almacenamos datos manualmente en RAM
@@ -161,6 +160,9 @@ MAIN_LOOP:
 	BREQ	COUNTSECS_UP
 	RJMP	MAIN_LOOP
 
+	;Si aumentamos 1 segundo, debemos verificar si van 10 segundos en el conteo
+	;Si ya van 10 segundos en el conteo, reiniciamos el Display del contador de unidades de segundo (COUNTSECS)...
+	;y aumentamos el valor de decenas de segundo (COUNTDECS)
 	COUNTSECS_UP:
 		CLR		COUNTMILLIS
 		INC		COUNTSECS
@@ -177,6 +179,7 @@ MAIN_LOOP:
 		BREQ	COUNTDECS_CLEAR
 		ADIW	X, 1
 		RJMP	MAIN_LOOP
+	;Si ya van 60 segundos en el conteo, reiniciamos el Display del contador de decenas de segundo (COUNTSECS)...
 	COUNTDECS_CLEAR:
 		CLR		COUNTDECS
 		LDI		XL, LOW(DISP7SEG_RAM << 1)
@@ -186,7 +189,9 @@ MAIN_LOOP:
 
 
 ;********Sub-rutinas de interrupción******** 
-TIMER_RESET_AND_DISPS_TOGGLE:
+TIMER_RESET_AND_DISPS_TOGGLE:		
+	;Rutina para reiniciar Timer0 luego de 10ms...
+	;y para "togglear" qué display se muestra (Unidades de segundo o decenas de segundo)
 	;Reiniciamos TIMER0 e incrementamos COUNTMILLIS
 	INC		COUNTMILLIS
 	LDI		R16, 100
